@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>his space</title>
+  <link rel="stylesheet" href="style.css">
+  <script>if (/[?&]exit=1/.test(location.search)) document.documentElement.classList.add('arriving');</script>
+</head>
+<body>
+
+  <main class="scene" id="hero">
+    <svg id="scene" viewBox="0 0 800 613" preserveAspectRatio="xMidYMid meet"
+         role="img" aria-label="Rumah kecil dengan lampu menyala di tengah angin, pohon bergoyang dan awan berjalan">
+
+      <defs>
+        <radialGradient id="lampGlow">
+          <stop offset="0" stop-color="#ffd27a" stop-opacity=".8"/>
+          <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="groundGlow">
+          <stop offset="0" stop-color="#ffd27a" stop-opacity=".65"/>
+          <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="interior" cx="50%" cy="55%" r="70%">
+          <stop offset="0" stop-color="#fffbe6"/>
+          <stop offset=".6" stop-color="#ffe8a0"/>
+          <stop offset="1" stop-color="#ffc95e"/>
+        </radialGradient>
+        <linearGradient id="spill" gradientUnits="userSpaceOnUse" x1="386" y1="293" x2="240" y2="395">
+          <stop offset="0" stop-color="#ffe39a" stop-opacity=".95"/>
+          <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="burst">
+          <stop offset="0"   stop-color="#fffdf0" stop-opacity="1"/>
+          <stop offset=".35" stop-color="#ffeaa6" stop-opacity=".85"/>
+          <stop offset="1"   stop-color="#ffd27a" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="backRoofClip"><polygon points="359.0,96.5 533.0,183.5 595.0,197.9 421.0,110.9"/></clipPath>
+        <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6"/>
+        </filter>
+      </defs>
+
+      <g id="camera">
+
+      <g class="clouds">
+        <g transform="translate(0,40)">
+          <g class="cloud" style="--d:290s; --s:-109s">
+            <g fill="#eef1f6" opacity=".95">
+              <rect x="0" y="28" width="190" height="24" rx="12"/>
+              <circle cx="70" cy="26" r="24"/>
+              <circle cx="118" cy="18" r="28"/>
+              <circle cx="160" cy="34" r="16"/>
+            </g>
+            <rect x="190" y="40" width="90" height="8" rx="4" fill="#e3e8f0"/>
+          </g>
+        </g>
+        <g transform="translate(0,22)">
+          <g class="cloud" style="--d:330s; --s:-179s">
+            <g fill="#eef1f6" opacity=".95">
+              <rect x="0" y="20" width="155" height="22" rx="11"/>
+              <circle cx="50" cy="22" r="17"/>
+              <circle cx="98" cy="14" r="22"/>
+            </g>
+            <rect x="160" y="26" width="90" height="8" rx="4" fill="#e3e8f0"/>
+          </g>
+        </g>
+        <g transform="translate(0,105)">
+          <g class="cloud" style="--d:300s; --s:-178s">
+            <g fill="#eef1f6" opacity=".95">
+              <rect x="0" y="15" width="140" height="20" rx="10"/>
+              <circle cx="45" cy="16" r="14"/>
+              <circle cx="88" cy="10" r="18"/>
+            </g>
+            <rect x="140" y="22" width="40" height="7" rx="3.5" fill="#e3e8f0"/>
+          </g>
+        </g>
+        <g transform="translate(0,8)">
+          <g class="cloud" style="--d:360s; --s:-173s">
+            <g fill="#e9edf4" opacity=".8">
+              <rect x="0" y="16" width="110" height="16" rx="8"/>
+              <circle cx="38" cy="16" r="12"/>
+              <circle cx="72" cy="12" r="14"/>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <ellipse class="ground-shadow" cx="400" cy="490" rx="330" ry="52" fill="#b4bccb"/>
+
+      <g class="island">
+
+        <polygon points="68,325 405,500 405,520 68,345" fill="#8aa396"/>
+        <polygon points="405,500 750,328 750,348 405,520" fill="#738e7f"/>
+
+        <polygon points="68,325 412,150 750,328 405,500" fill="#a9c3b5"/>
+        <polygon points="68,325 412,150 750,328 405,500" fill="none" stroke="#bcd2c6" stroke-width="2"/>
+
+        <polygon points="352,285 402,310 232.8,394.6 182.8,369.6" fill="#c9d3c4"/>
+        <g stroke="#b3bfae" stroke-width="1.6" stroke-linecap="round">
+          <line x1="323.8" y1="299.1" x2="373.8" y2="324.1"/>
+          <line x1="295.6" y1="313.2" x2="345.6" y2="338.2"/>
+          <line x1="267.4" y1="327.3" x2="317.4" y2="352.3"/>
+          <line x1="239.2" y1="341.4" x2="289.2" y2="366.4"/>
+          <line x1="211.0" y1="355.5" x2="261.0" y2="380.5"/>
+        </g>
+
+        <ellipse cx="305" cy="324" rx="100" ry="34" fill="url(#groundGlow)" class="glow-pulse"/>
+        <ellipse cx="385" cy="302" rx="62" ry="22" fill="url(#groundGlow)" opacity=".8"/>
+
+        <polygon class="door-spill" points="366,283 406,303 335,425 150,382" fill="url(#spill)"/>
+
+        <ellipse cx="212" cy="287" rx="42" ry="14" fill="#8ba598"/>
+        <ellipse cx="622" cy="354" rx="46" ry="14" fill="#8ba598"/>
+
+        <g transform="translate(192,285)">
+          <g class="tree" style="--a:-2.2; --b:3.4; --dur:4.6s; --delay:-1s">
+            <path d="M-4,0 C-6,-40 6,-70 28,-98 L38,-92 C18,-64 8,-36 6,0 Z" fill="#7a5547"/>
+            <g transform="translate(32,-96)">
+              <g class="canopy" style="--a:-1.6; --b:2.2; --dur:2.9s; --delay:-.4s">
+                <circle cx="2"  cy="-20" r="38" fill="#86ab98"/>
+                <circle cx="38" cy="-12" r="32" fill="#6b8f7d"/>
+                <circle cx="30" cy="-52" r="40" fill="#79a08b"/>
+                <circle cx="72" cy="-46" r="25" fill="#6c927e"/>
+                <circle cx="8"  cy="-62" r="22" fill="#82a894"/>
+              </g>
+            </g>
+          </g>
+        </g>
+
+        <g id="house">
+
+          <polygon points="470.0,255.0 526.0,186.0 582.0,199.0 582.0,279.0 470.0,335.0" fill="#e8e6da"/>
+
+          <polygon points="359.0,96.5 533.0,183.5 595.0,197.9 421.0,110.9" fill="#86675a"/>
+          <g stroke="#7a5c4f" stroke-width="1.6" clip-path="url(#backRoofClip)"><line x1="375.0" y1="100.2" x2="549.0" y2="187.2"/><line x1="391.0" y1="103.9" x2="565.0" y2="190.9"/><line x1="407.0" y1="107.6" x2="581.0" y2="194.6"/></g>
+          <line x1="533.0" y1="183.5" x2="595.0" y2="197.9" stroke="#5a4237" stroke-width="4" stroke-linecap="round"/>
+          <line x1="359.0" y1="96.5" x2="533.0" y2="183.5" stroke="#5a4237" stroke-width="4" stroke-linecap="round"/>
+
+          <g><polygon points="472.0,152.2 494.0,163.2 494.0,128.0 472.0,117.0" fill="#b86f62"/><polygon points="494.0,163.2 512.0,167.4 512.0,119.0 494.0,128.0" fill="#9e5648"/><polygon points="466.0,117.0 494.0,131.0 494.0,126.0 466.0,112.0" fill="#8b6c5e"/><polygon points="494.0,131.0 518.0,119.0 518.0,114.0 494.0,126.0" fill="#77594d"/><polygon points="466.0,112.0 494.0,126.0 518.0,114.0 490.0,100.0" fill="#b19584"/><polygon points="478.0,112.0 494.0,120.0 506.0,114.0 490.0,106.0" fill="#5f463b"/></g>
+
+          <g transform="translate(470,254) skewY(-26.57)">
+            <rect x="0" y="0" width="112" height="80" fill="#d7d5c8"/>
+            <rect x="0" y="74" width="112" height="6" fill="#bdbbad"/>
+            <g class="window-flicker">
+              <rect x="48" y="18" width="36" height="44" fill="#f6c866"/>
+              <rect x="48" y="18" width="36" height="44" fill="none" stroke="#3d4965" stroke-width="3.5"/>
+              <line x1="66" y1="18" x2="66" y2="62" stroke="#3d4965" stroke-width="2.5"/>
+              <line x1="48" y1="40" x2="84" y2="40" stroke="#3d4965" stroke-width="2.5"/>
+            </g>
+          </g>
+
+          <g transform="translate(310,175) skewY(26.57)">
+            <rect x="0" y="0" width="160" height="80" fill="#e8e6da"/>
+            <rect x="0" y="0" width="160" height="10" fill="#cfcdbf" opacity=".7"/>
+            <rect x="0" y="74" width="160" height="6" fill="#bdbbad"/>
+
+            <g class="window-flicker">
+              <rect x="8" y="22" width="40" height="40" fill="#f6c866"/>
+              <rect x="8" y="22" width="40" height="40" fill="none" stroke="#3d4965" stroke-width="3.5"/>
+              <line x1="28" y1="22" x2="28" y2="62" stroke="#3d4965" stroke-width="2.5"/>
+              <line x1="8" y1="42" x2="48" y2="42" stroke="#3d4965" stroke-width="2.5"/>
+            </g>
+            <rect x="4" y="62" width="48" height="9" rx="1" fill="#6b5a52"/>
+            <circle cx="14" cy="60" r="5.5" fill="#76a584"/>
+            <circle cx="28" cy="59" r="6" fill="#6a9a79"/>
+            <circle cx="42" cy="60" r="5.5" fill="#76a584"/>
+
+            <g class="window-flicker" style="--delay:-2s">
+              <rect x="108" y="22" width="40" height="40" fill="#f6c866"/>
+              <rect x="108" y="22" width="40" height="40" fill="none" stroke="#3d4965" stroke-width="3.5"/>
+              <line x1="128" y1="22" x2="128" y2="62" stroke="#3d4965" stroke-width="2.5"/>
+              <line x1="108" y1="42" x2="148" y2="42" stroke="#3d4965" stroke-width="2.5"/>
+            </g>
+            <rect x="104" y="62" width="48" height="9" rx="1" fill="#6b5a52"/>
+            <circle cx="114" cy="60" r="5.5" fill="#76a584"/>
+            <circle cx="128" cy="59" r="6" fill="#6a9a79"/>
+            <circle cx="142" cy="60" r="5.5" fill="#76a584"/>
+
+            <g id="door" class="door" role="button" tabindex="0" aria-label="Buka pintu rumah">
+              <rect class="door-frame" x="52" y="6" width="48" height="74" fill="#e8e6da" stroke="#cfcdbf" stroke-width="2"/>
+
+              <rect x="56" y="10" width="40" height="70" fill="url(#interior)"/>
+
+              <g class="door-panel">
+                <rect x="56" y="10" width="40" height="70" fill="#f4c76a"/>
+                <rect x="56" y="10" width="40" height="70" fill="none" stroke="#e3a94a" stroke-width="2"/>
+                <rect x="60" y="14" width="32" height="20" fill="#f9dc94" opacity=".7"/>
+                <rect x="60" y="40" width="32" height="34" fill="#f9dc94" opacity=".35"/>
+                <circle class="bell-ring" cx="76" cy="52" r="9" fill="none" stroke="#fff" stroke-width="2"/>
+                <circle cx="76" cy="52" r="7" fill="#f6e3b0" stroke="#fff" stroke-width="2"/>
+                <circle cx="76" cy="52" r="3" fill="#3d4965"/>
+                <rect class="door-shade" x="56" y="10" width="40" height="70" fill="#7a4b12" opacity="0"/>
+              </g>
+
+              <rect x="50" y="4" width="54" height="78" fill="transparent"/>
+            </g>
+
+            <rect x="50" y="80" width="54" height="9" fill="#eceae2"/>
+            <rect x="50" y="86" width="54" height="3" fill="#cfcdbf"/>
+          </g>
+
+          <polygon points="359.0,96.5 533.0,183.5 471.0,259.9 297.0,172.9" fill="#9a7a69"/>
+          <g stroke="#8d6e5e" stroke-width="1.6"><line x1="311.0" y1="155.6" x2="485.0" y2="242.6"/><line x1="323.0" y1="140.9" x2="497.0" y2="227.9"/><line x1="335.0" y1="126.1" x2="509.0" y2="213.1"/><line x1="347.0" y1="111.3" x2="521.0" y2="198.3"/></g>
+          <polygon points="297.0,172.9 471.0,259.9 471.0,265.9 297.0,178.9" fill="#5a4237"/>
+          <line x1="533.0" y1="183.5" x2="471.0" y2="259.9" stroke="#5a4237" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="471.0" y1="265.9" x2="471.0" y2="259.9" stroke="#5a4237" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="359.0" y1="96.5" x2="533.0" y2="183.5" stroke="#b39583" stroke-width="4" stroke-linecap="round"/>
+          <line x1="359.0" y1="96.5" x2="297.0" y2="172.9" stroke="#5a4237" stroke-width="5" stroke-linecap="round"/>
+        </g>
+
+        <g class="smoke" fill="#fff">
+          <circle cx="492" cy="107" r="6"  style="--delay:0s"/>
+          <circle cx="492" cy="107" r="7"  style="--delay:-1.2s"/>
+          <circle cx="492" cy="107" r="8"  style="--delay:-2.4s"/>
+          <circle cx="492" cy="107" r="9"  style="--delay:-3.6s"/>
+          <circle cx="492" cy="107" r="10" style="--delay:-4.8s"/>
+        </g>
+
+        <g transform="translate(278,312)">
+          <circle class="glow-pulse" cx="0" cy="-86" r="38" fill="url(#lampGlow)"/>
+          <rect x="-2.5" y="-76" width="5" height="76" fill="#2a3650"/>
+          <rect x="-6" y="-6" width="12" height="6" fill="#2a3650"/>
+          <rect x="-11" y="-98" width="22" height="24" fill="#f5d47a" stroke="#2a3650" stroke-width="2.5"/>
+          <line x1="0" y1="-98" x2="0" y2="-74" stroke="#2a3650" stroke-width="1.5"/>
+          <polygon points="-14,-98 0,-110 14,-98" fill="#2a3650"/>
+        </g>
+
+        <g transform="translate(598,352)">
+          <g class="tree" style="--a:-3.2; --b:2.2; --dur:4.1s; --delay:-2.3s">
+            <path d="M-3,0 C-2,-26 6,-52 18,-72 L26,-66 C16,-48 8,-26 6,0 Z" fill="#7a5547"/>
+            <g transform="translate(22,-70)">
+              <g class="canopy" style="--a:-2; --b:1.6; --dur:3.1s; --delay:-1.1s">
+                <circle cx="22" cy="-20" r="32" fill="#6b8f7d"/>
+                <circle cx="50" cy="-14" r="28" fill="#79a08b"/>
+                <circle cx="32" cy="-52" r="40" fill="#7ea58f"/>
+                <circle cx="62" cy="-57" r="26" fill="#6a917c"/>
+                <circle cx="10" cy="-46" r="20" fill="#86ab98"/>
+              </g>
+            </g>
+          </g>
+        </g>
+
+        <g id="fence"></g>
+
+        <circle class="door-burst" cx="386" cy="258" r="100" fill="url(#burst)" pointer-events="none"/>
+
+      </g>
+
+      <g class="wind">
+        <path pathLength="100" d="M158,176 C190,168 225,184 262,164"  style="--t:5.2s; --d:-.5s"/>
+        <path pathLength="100" d="M40,224 C90,216 130,232 182,208"    style="--t:6.4s; --d:-3s"/>
+        <path pathLength="100" d="M62,248 C100,244 130,252 160,238"   style="--t:4.6s; --d:-1.8s"/>
+        <path pathLength="100" d="M30,383 C70,378 110,388 150,371"    style="--t:5.8s; --d:-4s"/>
+        <path pathLength="100" d="M600,190 C650,182 700,196 752,176"  style="--t:5.5s; --d:-2.2s"/>
+        <path pathLength="100" d="M645,222 C690,216 720,226 752,208"  style="--t:4.8s; --d:-.9s"/>
+        <path pathLength="100" d="M480,276 C520,268 560,282 598,266"  style="--t:6.1s; --d:-3.6s"/>
+        <path pathLength="100" d="M630,342 C670,336 710,344 752,324"  style="--t:5s;   --d:-1.4s"/>
+        <path pathLength="100" d="M672,402 C710,398 740,404 770,394"  style="--t:6.8s; --d:-5s"/>
+        <path pathLength="100" d="M100,140 C150,128 200,148 262,126"  style="--t:7s;   --d:-2.7s"/>
+        <path pathLength="100" d="M520,120 C570,108 620,126 690,104"  style="--t:6.6s; --d:-4.4s"/>
+        <path pathLength="100" d="M330,420 C380,412 430,428 490,408"  style="--t:5.6s; --d:-.2s"/>
+      </g>
+
+      <g id="leaves"></g>
+
+      </g>
+    </svg>
+  </main>
+
+  <p class="hint" id="hint">Ketuk pintunya</p>
+
+  <audio id="wind-sfx" src="music/angin.mp3" loop preload="auto"></audio>
+
+  <div class="flash" id="flash" aria-hidden="true"></div>
+
+  <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-box">
+      <p class="welcome-title" id="welcome-title">Selamat datang di rumah rara</p>
+      <button type="button" class="welcome-btn" id="welcome-start">Mulai</button>
+    </div>
+  </div>
+
+  <div class="doorfront" id="doorfront" aria-hidden="true">
+    <svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid meet" focusable="false">
+      <defs>
+        <radialGradient id="fdInterior" cx="50%" cy="55%" r="70%">
+          <stop offset="0" stop-color="#fffbe6"/>
+          <stop offset=".6" stop-color="#ffe8a0"/>
+          <stop offset="1" stop-color="#ffc95e"/>
+        </radialGradient>
+        <radialGradient id="fdGlow">
+          <stop offset="0" stop-color="#ffd27a" stop-opacity=".8"/>
+          <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="fdSpill" gradientUnits="userSpaceOnUse" x1="0" y1="712" x2="0" y2="800">
+          <stop offset="0" stop-color="#ffe39a" stop-opacity=".95"/>
+          <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="fdDoor" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#efc9cf"/>
+          <stop offset=".5" stop-color="#f8dde0"/>
+          <stop offset="1" stop-color="#efc9cf"/>
+        </linearGradient>
+      </defs>
+
+      <rect x="-2000" y="-2000" width="4000" height="2712" fill="#f2c9d8"/>
+      <rect x="-2000" y="540" width="4000" height="172" fill="#e2a8be"/>
+      <rect x="-2000" y="534" width="4000" height="8" fill="#fbeaf0"/>
+      <rect x="-2000" y="700" width="4000" height="12" fill="#fdf3f6"/>
+      <rect x="-2000" y="712" width="4000" height="2000" fill="#b79f7e"/>
+      <g stroke="#a48c6a" stroke-width="1.5"><line x1="-2000" y1="742" x2="2000" y2="742"/><line x1="-2000" y1="774" x2="2000" y2="774"/></g>
+
+      <circle class="fd-glow" cx="200" cy="430" r="340" fill="url(#fdGlow)"/>
+      <polygon class="fd-spill" points="52,712 348,712 392,800 8,800" fill="url(#fdSpill)"/>
+
+      <polygon points="78,738 322,738 338,786 62,786" fill="#9a7a69" stroke="#5a4237" stroke-width="2"/>
+      <polygon points="86,744 314,744 327,780 73,780" fill="none" stroke="#dcc5b4" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="200" y="768" text-anchor="middle" font-family="Impact, 'Arial Black', system-ui, sans-serif" font-size="18" font-weight="800" fill="#f6ecd0" textLength="110" lengthAdjust="spacingAndGlyphs">WELCOME</text>
+
+      <g class="fd-door" id="fd-door" role="button" tabindex="0" aria-label="Buka pintu kamar">
+        <rect class="fd-frame" x="36" y="140" width="328" height="572" fill="#fbf3f2" stroke="#e3cfd0" stroke-width="2"/>
+        <rect x="50" y="154" width="300" height="558" fill="url(#fdInterior)"/>
+
+        <g class="fd-leaf">
+          <rect x="50" y="154" width="300" height="558" fill="url(#fdDoor)" stroke="#c98d98" stroke-width="2"/>
+          <rect x="62" y="166" width="276" height="534" fill="none" stroke="#e3aab4" stroke-width="2" opacity=".7"/>
+
+          <path d="M92,390 V268 C92,216 140,190 200,190 C260,190 308,216 308,268 V390 Z" fill="#f9e5e8" stroke="#e3aab4" stroke-width="2.5"/>
+          <rect x="92" y="418" width="216" height="248" rx="14" fill="#f9e5e8" stroke="#e3aab4" stroke-width="2.5"/>
+
+          <circle cx="200" cy="292" r="38" fill="none" stroke="#a9c1a8" stroke-width="9"/>
+          <circle cx="238" cy="292" r="5.5" fill="#fff"/>
+          <circle cx="227" cy="319" r="5.5" fill="#f2b6c0"/>
+          <circle cx="200" cy="330" r="5.5" fill="#fff"/>
+          <circle cx="173" cy="319" r="5.5" fill="#f2b6c0"/>
+          <circle cx="162" cy="292" r="5.5" fill="#fff"/>
+          <circle cx="173" cy="265" r="5.5" fill="#f2b6c0"/>
+          <circle cx="200" cy="254" r="5.5" fill="#fff"/>
+          <circle cx="227" cy="265" r="5.5" fill="#f2b6c0"/>
+
+          <g transform="rotate(-3 200 468)">
+            <rect x="116" y="436" width="168" height="64" rx="14" fill="#fffaf5" stroke="#e3aab4" stroke-width="2.5"/>
+            <text x="200" y="469" text-anchor="middle" font-family="'Trebuchet MS', 'Segoe UI', system-ui, sans-serif" font-size="21" font-weight="800" fill="#c9788c" textLength="132" lengthAdjust="spacingAndGlyphs">KAMAR RARA</text>
+            <text x="200" y="486" text-anchor="middle" font-family="'Trebuchet MS', 'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="800" fill="#d996a6" textLength="104" lengthAdjust="spacing">KETUK DULU!</text>
+          </g>
+
+          <path d="M200,626 C168,602 175,574 194,574 C198,574 200,578 200,578 C200,578 202,574 206,574 C225,574 232,602 200,626 Z" fill="#f2b6c0"/>
+
+          <rect x="316" y="448" width="12" height="40" rx="6" fill="#d8a48f"/>
+          <circle cx="322" cy="468" r="11" fill="#e2b3a2" stroke="#b98672" stroke-width="2"/>
+          <circle cx="319" cy="465" r="3.5" fill="#f8e0d4"/>
+
+          <rect x="50" y="696" width="300" height="16" fill="#e3b5bd"/>
+
+          <rect class="fd-shade" x="50" y="154" width="300" height="558" fill="#7a4b12" opacity="0"/>
+        </g>
+        <rect x="36" y="140" width="328" height="572" fill="transparent"/>
+      </g>
+    </svg>
+    <p class="fd-hint">Ketuk pintunya</p>
+  </div>
+
+  <div class="dialog" id="dialog" role="dialog" aria-label="Percakapan" hidden>
+    <div class="dlg-wrap">
+      <img class="dlg-portrait" src="picture/doll.png" alt="" onerror="this.remove()">
+      <div class="dlg-name">rara</div>
+      <div class="dlg-box">
+        <p class="dlg-text"><span id="dlg-typed"></span><span id="dlg-rest"></span></p>
+        <span class="dlg-next" aria-hidden="true">&#9660;</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
