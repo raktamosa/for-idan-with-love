@@ -897,7 +897,7 @@ const dlgBlip = (() => {
 })();
 
 const ROOM_LINES = [
-  'happy birthday sayang! sedikit kejutan buat kamu',
+  'happy birthday sayang! sedikit kejutan buat sayang',
   'musik nya kedengeran ga sayang? coba atur volume di komputer',
 ];
 const dialogEl = document.getElementById('dialog');
